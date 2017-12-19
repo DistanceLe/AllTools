@@ -1,0 +1,53 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FDFullscreenPopGesture (1.1)
+  - FLAnimatedImage (1.0.12)
+  - LJCalendar (1.0.6)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/GIF (4.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
+  - SDWebImage/MapKit (4.0.0):
+    - SDWebImage/Core
+  - XTSafeCollection (1.0.5)
+
+DEPENDENCIES:
+  - AFNetworking
+  - FDFullscreenPopGesture (~> 1.1)
+  - LJCalendar (~> 1.0.6)
+  - Masonry
+  - MJRefresh
+  - SDWebImage/Core
+  - SDWebImage/GIF
+  - SDWebImage/MapKit
+  - XTSafeCollection
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  LJCalendar: ca95b4aea16e7f1ec515b1a81de3d5e1db0e6b33
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  XTSafeCollection: c76a5d96f5c68457055ca4b35df7fbe97532d235
+
+PODFILE CHECKSUM: b8d8a13b03d760d26d5f61902dff4809c286faf4
+
+COCOAPODS: 1.3.1
