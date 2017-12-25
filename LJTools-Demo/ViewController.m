@@ -38,7 +38,7 @@
         DLog(@" 开始刷新啦`````");
         
 //        [self registerRequset];
-        [self uploadFile];
+//        [self uploadFile];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.35*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.contentScrollView endSystemHeadRefresh];
@@ -77,15 +77,15 @@
 
 -(void)uploadFile{
     
-    NSString* filePath = [[NSBundle mainBundle]pathForResource:@"K6" ofType:@"bin"];
-
-    [LJNetworkManager uploadFileWithURL:@"http://192.168.31.96:8080/WebDemo/Upload/UploadServlet" parameters:nil name:@"K6" fileType:@"bin" filePath:filePath progress:^(NSProgress *progress) {
-        DLog(@"...progress:  %.2f", progress.completedUnitCount*1.0/progress.totalUnitCount);
-    } success:^(id responseObject) {
-        DLog(@"...成功上传 ✌️ %@", responseObject);
-    } failure:^(NSError *error) {
-        DLog(@"上传失败。。。%@", error);
-    }];
+//    NSString* filePath = [[NSBundle mainBundle]pathForResource:@"K6" ofType:@"bin"];
+//
+//    [LJNetworkManager uploadFileWithURL:@"http://192.168.31.96:8080/WebDemo/Upload/UploadServlet" parameters:nil name:@"K6" fileType:@"bin" filePath:filePath progress:^(NSProgress *progress) {
+//        DLog(@"...progress:  %.2f", progress.completedUnitCount*1.0/progress.totalUnitCount);
+//    } success:^(id responseObject) {
+//        DLog(@"...成功上传 ✌️ %@", responseObject);
+//    } failure:^(NSError *error) {
+//        DLog(@"上传失败。。。%@", error);
+//    }];
     
 //    [LJNetworkManager uploadImagesWithURL:@"http://192.168.31.96:8080/WebDemo/Upload/UploadServlet" parameters:nil name:@"endImage" images:@[[UIImage imageNamed:@"end.png"]] fileNames:@[@"endFileName"] imageScale:1.0 imageType:@"png" progress:^(NSProgress *progress) {
 //        DLog(@"...progress:  %.2f", progress.completedUnitCount/progress.totalUnitCount/1.0);

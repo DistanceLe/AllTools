@@ -44,7 +44,6 @@
 		2A7960BD1EC45ADD00F5915E /* LJFingerMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7960BC1EC45ADD00F5915E /* LJFingerMark.m */; };
 		2A7960C41EC45B6200F5915E /* LJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7960C01EC45B6200F5915E /* LJButton.m */; };
 		2A7960C51EC45B6200F5915E /* LJButton_Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7960C21EC45B6200F5915E /* LJButton_Google.m */; };
-		2A7960C61EC45B6200F5915E /* mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A7960C31EC45B6200F5915E /* mark.png */; };
 		2A7960CA1EC45B9100F5915E /* LJRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7960C91EC45B9100F5915E /* LJRSA.m */; };
 		2A7960D11EC45EA300F5915E /* LJColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7960CD1EC45EA300F5915E /* LJColumnCell.m */; };
 		2A7960D21EC45EA300F5915E /* LJColumnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7960CE1EC45EA300F5915E /* LJColumnCell.xib */; };
@@ -164,7 +163,6 @@
 		2A7960C01EC45B6200F5915E /* LJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJButton.m; sourceTree = "<group>"; };
 		2A7960C11EC45B6200F5915E /* LJButton_Google.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJButton_Google.h; sourceTree = "<group>"; };
 		2A7960C21EC45B6200F5915E /* LJButton_Google.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJButton_Google.m; sourceTree = "<group>"; };
-		2A7960C31EC45B6200F5915E /* mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark.png; sourceTree = "<group>"; };
 		2A7960C81EC45B9100F5915E /* LJRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJRSA.h; sourceTree = "<group>"; };
 		2A7960C91EC45B9100F5915E /* LJRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRSA.m; sourceTree = "<group>"; };
 		2A7960CC1EC45EA300F5915E /* LJColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJColumnCell.h; sourceTree = "<group>"; };
@@ -422,7 +420,6 @@
 				2A7960C01EC45B6200F5915E /* LJButton.m */,
 				2A7960C11EC45B6200F5915E /* LJButton_Google.h */,
 				2A7960C21EC45B6200F5915E /* LJButton_Google.m */,
-				2A7960C31EC45B6200F5915E /* mark.png */,
 			);
 			path = LJUIKit;
 			sourceTree = "<group>";
@@ -582,7 +579,6 @@
 			files = (
 				2A79603F1EC402F500F5915E /* LaunchScreen.storyboard in Resources */,
 				2AD91B861FAB04E10075FB60 /* end.png in Resources */,
-				2A7960C61EC45B6200F5915E /* mark.png in Resources */,
 				2A7960D21EC45EA300F5915E /* LJColumnCell.xib in Resources */,
 				2A79603C1EC402F500F5915E /* Assets.xcassets in Resources */,
 				2A7960D91EC4620C00F5915E /* KMCGeigerCounterTick.aiff in Resources */,

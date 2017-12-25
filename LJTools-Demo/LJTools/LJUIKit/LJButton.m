@@ -60,7 +60,7 @@
         [self.layer insertSublayer:_backLayer atIndex:0];
         
         CALayer* maskLayer=[CALayer layer];
-        maskLayer.contents=(id)[UIImage imageNamed:@"mark.png"].CGImage;
+        maskLayer.contents=(id)[self getImageForColor].CGImage;
         maskLayer.bounds=self.bounds;
         maskLayer.position=_currentTouchPoint;
         maskLayer.masksToBounds=YES;
@@ -112,7 +112,7 @@
         [self.layer insertSublayer:_backLayer1 atIndex:0];
         
         CALayer* maskLayer=[CALayer layer];
-        maskLayer.contents=(id)[UIImage imageNamed:@"mark.png"].CGImage;
+        maskLayer.contents=(id)[self getImageForColor].CGImage;
         maskLayer.bounds=self.bounds;
         maskLayer.position=_currentTouchPoint;
         maskLayer.masksToBounds=YES;
@@ -180,5 +180,16 @@
     [self setNeedsDisplay];
 }
 
-
+#pragma mark - ================ 生成一个蒙版图片 ==================
+-(UIImage*)getImageForColor{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 5, 5);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [[UIColor redColor] CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
 @end

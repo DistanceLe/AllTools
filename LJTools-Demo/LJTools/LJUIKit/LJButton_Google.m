@@ -7,8 +7,11 @@
 //
 
 #import "LJButton_Google.h"
+#import "UIView+LJ.h"
 
 #define Radius      20
+#define kRGBColor(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 
 @interface LJButton_Google ()<CAAnimationDelegate>
 
@@ -51,7 +54,7 @@
             //[self.layer addSublayer:_backLayer];
             
             CALayer* maskLayer=[CALayer layer];
-            maskLayer.contents=(id)[UIImage imageNamed:@"mark.png"].CGImage;
+            maskLayer.contents=(id)[self getImageForColor].CGImage;
             maskLayer.bounds=self.bounds;
             maskLayer.position=_currentTouchPoint;
             maskLayer.masksToBounds=YES;
@@ -150,4 +153,21 @@
     }
 }
 
+#pragma mark - ================ 生成一个蒙版图片 ==================
+-(UIImage*)getImageForColor{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 5, 5);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [[UIColor redColor] CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
+
+
+
+
 @end
+

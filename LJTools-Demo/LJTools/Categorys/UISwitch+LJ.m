@@ -14,7 +14,7 @@
 -(void)setCustomMask{
     
     CALayer* maskLayer=[CALayer layer];
-    maskLayer.contents=(id)[UIImage imageNamed:@"mark.png"].CGImage;
+    maskLayer.contents=(id)[self getImageForColor].CGImage;
     maskLayer.frame = CGRectMake(2, 8, self.lj_width-4, self.lj_height-16);
     maskLayer.cornerRadius = (self.lj_height-16)/2.0;
     maskLayer.masksToBounds=YES;
@@ -38,7 +38,18 @@
 }
 
 
-
+#pragma mark - ================ 生成一个蒙版图片 ==================
+-(UIImage*)getImageForColor{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 5, 5);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [[UIColor redColor] CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
 
 
 
