@@ -58,4 +58,27 @@ extern NSString* const WKRSAPrivateKey;
 /**  解密 二进制数据， 用私钥 */
 + (NSData *)decryptData:(NSData *)data privateKey:(NSString *)privKey;
 
+
+
+
+
+
+
+#pragma mark - ================ AES 加解密 ==================
+/**  进行加密 */
++ (NSData *)aesEncryptDataWithData:(NSData *)data Key:(NSString *)key;
++ (NSString *)aesEncryptStringWithString:(NSString *)string andKey:(NSString *)key;
+
+
+/**  解密 */
++ (NSData *)aesDecryptDataWithData:(NSData *)data andKey:(NSString *)key;
++ (NSString *)aesDecryptStringWithString:(NSString *)string andKey:(NSString *)key;
+
+
+
+
+
+
+
+
 @end
