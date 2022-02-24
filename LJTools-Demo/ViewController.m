@@ -13,6 +13,9 @@
 #import "LJRegisterRequest.h"
 #import "LJNetworkManager.h"
 
+
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
@@ -63,7 +66,19 @@
     
     
 }
-
+- (NSString *)getCarrierInfo{
+    CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+    
+    //双卡的
+    NSDictionary<NSString *, CTCarrier *> *carriersDic = [telephonyInfo serviceSubscriberCellularProviders];
+    //旧版本的 单卡
+    CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
+    NSString *carrierName=[carrier carrierName];
+    
+    
+    NSLog(@"%@", carrierName);
+    return carrierName;
+};
 -(void)registerRequset{
     LJRegisterRequest* request = [[LJRegisterRequest alloc]init];
     request.phone = @"12345678910";
